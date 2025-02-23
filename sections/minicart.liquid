@@ -1,0 +1,32 @@
+<script src="{{ 'minicart.js' | asset_url }}" defer="defer"></script>
+
+<div
+  class="minicart-underlay"
+  data-minicart-underlay
+  onclick="window.closeMinicart(event)"
+></div>
+<section class="minicart" data-minicart>
+  <div class="minicart__inner">
+    <div class="minicart__header">
+      <h2 class="minicart__title">Your Bag</h2>
+      <button
+        class="minicart__close"
+        data-close-cart-trigger
+        onclick="window.closeMinicart(event)"
+      >
+        {% render 'icon-close' %}
+      </button>
+    </div>
+    <div class="minicart__body">
+      <div class="minicart__items" data-minicart-items></div>
+      {% comment %} upsells with 2 distinct rules for displaying, maximum of 3 products to display {% endcomment %}
+      <div class="minicart__upsells" data-minicart-upsells></div>
+    </div>
+    <div class="minicart__footer">
+      <div class="minicart__subtotal">
+        <h2 class="minicart__subtotal-label">Subtotal</h2>
+        <h2 class="minicart__subtotal-price">£<span data-minicart-total>0.00</span></h2>
+      </div>
+    </div>
+  </div>
+</section>
