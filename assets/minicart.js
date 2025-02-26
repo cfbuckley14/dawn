@@ -194,8 +194,6 @@ const openMinicart = (event) => {
   minicart.classList.add('is-open');
   minicartUnderlay.classList.add('is-open');
 
-  console.log(minicart.dataset);
-
   if (event) {
     event.preventDefault();
   }
