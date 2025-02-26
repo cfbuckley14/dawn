@@ -259,6 +259,7 @@
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {{ 'minicart.css' | asset_url | stylesheet_tag }}
+    {{ 'minicart-upsells.css' | asset_url | stylesheet_tag }}
 
     {%- if settings.cart_type == 'drawer' -%}
       {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
