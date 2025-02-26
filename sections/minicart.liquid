@@ -1,0 +1,42 @@
+<script src="{{ 'minicart.js' | asset_url }}" defer="defer"></script>
+
+<div
+  class="minicart-underlay"
+  data-minicart-underlay
+  onclick="window.closeMinicart(event)"
+></div>
+<section
+  class="minicart"
+  data-minicart
+  data-minicart-shop-here-string="{{ 'sections.cart.shop_here_html' | t | json | escape }}"
+  data-minicart-empty-cart-string="{{ 'sections.cart.empty_cart' | t }}"
+>
+  <div class="minicart__inner">
+    <div class="minicart__header">
+      <h2 class="minicart__title">{{ 'sections.cart.title' | t }}</h2>
+      <button
+        class="minicart__close"
+        data-close-cart-trigger
+        onclick="window.closeMinicart(event)"
+      >
+        {% render 'icon-close' %}
+      </button>
+    </div>
+    <div class="minicart__body">
+      <div class="minicart__items" data-minicart-items></div>
+      <div class="minicart__upsells" data-minicart-upsells>
+        <h2 class="minicart__upsells-title">{{ 'sections.cart.you_may_also_like' | t }}</h2>
+        <div class="minicart__upsells-items" data-minicart-upsells-items></div>
+      </div>
+    </div>
+    <div class="minicart__footer" data-minicart-footer>
+      <div class="minicart__subtotal">
+        <h2 class="minicart__subtotal-label">{{ 'sections.cart.subtotal' | t }}</h2>
+        <h2 class="minicart__subtotal-price"><span data-minicart-total>£0.00</span></h2>
+      </div>
+      <a href="/checkout" class="minicart__checkout-button button">
+        {{ 'sections.cart.checkout' | t }}
+      </a>
+    </div>
+  </div>
+</section>

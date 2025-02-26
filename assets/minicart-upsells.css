@@ -1,0 +1,28 @@
+.minicart__upsells-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.minicart__upsell-item {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.minicart__upsell-content {
+  width: 100%;
+}
+
+.minicart__upsell-add {
+  background: white;
+  border: none;
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.minicart__upsell-actions {
+  display: flex;
+  justify-content: space-between;
+}
